@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'sudo apt-get update'
+        sh 'apt-get update'
       }
     }
 
