@@ -3,7 +3,13 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh './bin/pio'
+        sh 'apt-get update'
+      }
+    }
+
+    stage('run build') {
+      steps {
+        sh './bin/pio run'
       }
     }
 
