@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('testing') {
+    stage('script run') {
       steps {
-        echo 'HI'
+        sh './bin/install.sh'
       }
     }
 
