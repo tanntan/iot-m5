@@ -15,8 +15,8 @@ sys.path.append(str(proDir)+'/bin/iot/.platformio')
 
 from platformio.__main__ import main
 if __name__ == '__main__':
-    command = "sudo apt-get install python3 && "
-    command += "sudo pip3 install platformio -t "+str(DIR)    +"/.platformio/"
+    command = "apt-get install python3 && "
+    command += "pip3 install platformio -t "+str(DIR)    +"/.platformio/"
     os.system(command)
 
     sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
