@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('python install') {
       steps {
-        sh 'sudo install python3-pip'
+        sh 'apt-get install python-pip '
       }
     }
 
