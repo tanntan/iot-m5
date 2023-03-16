@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('script run') {
       steps {
-        sh './bin/install.sh'
+        sh 'apt-get update'
       }
     }
 
