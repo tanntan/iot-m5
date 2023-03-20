@@ -1,15 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('run build') {
+    stage('Build') {
       steps {
-        sh './bin/pio run'
-      }
-    }
-
-    stage('') {
-      steps {
-        cleanWs(cleanWhenSuccess: true)
+        sh './iot/pio run -d ./apps/./iot/pio run -d ./apps/ltie-ltm-tls2.0-integration/ -e release'
       }
     }
 
