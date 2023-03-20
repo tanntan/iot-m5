@@ -1,0 +1,40 @@
+{
+    "name": "postmanTest",
+    "roomId": "SC-10",
+    "app": "LTM",
+    "extra_event": "configure",
+    
+    "config": {
+        "deviceName": "M5Stack-API-M5",
+        "lineID": "SC-10",
+        "lineSetupId": 2172,
+        "x-factory-id": 6,
+        "factoryId":"CM01",
+        "timeZone": 7,
+        "app": [
+            "TLS",
+            "LTM",
+            "LTIE"
+        ],
+        "ltie": 
+        {
+            "lineSetupId": 2172
+        },
+        "ltm":
+        {
+            "machines":
+            [
+                {
+                    "station": 13,
+                    "machinesSubType": "SN",
+                    "machineCode": "SN-1050"
+                },
+                {
+                    "station": 23,
+                    "machinesSubType": "HCVS-0441",
+                    "machineCode": "HCVS"
+                }
+            ]
+        }
+    }
+}

@@ -1,3 +1,0 @@
-{
-    "cmake.sourceDirectory": "${workspaceFolder}/.pio/libdeps/m5stack-core-esp32/M5Stack"
-}
