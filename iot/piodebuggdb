@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 proDir = Path().parent.resolve()
-sys.path.append(str(proDir)+'/bin/iot/.platformio')
+sys.path.append(str(proDir)+'/iot/.platformio')
 
 from platformio.__main__ import debug_gdb_main
 if __name__ == '__main__':

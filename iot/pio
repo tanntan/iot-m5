@@ -2,22 +2,24 @@
 # -*- coding: utf-8 -*-
 import re
 import sys
+import os
 from pathlib import Path
 
-proDir = Path().parent.resolve()
-sys.path.append(str(proDir)+'/bin/iot/.platformio')
 def createHeader(val):
     val = val.split("\n")
     stringVal = '#define VERSION        "'+val[0]+'"'
     return stringVal
 
 def getVersion():
-    f = open("version", "r")
+    f = open(os.path.join(proDir, "version"), "r")
     readVal = f.readline()
     f.close()
-    h = open("iot/libs/version.h", "w")
+    h = open(os.path.join(proDir, "apps/libs/version.h"), "w")
     h.write(createHeader(readVal))
     h.close()
+
+proDir = Path().parent.resolve()
+sys.path.append(str(proDir)+'/iot/.platformio')
 
 from platformio.__main__ import main
 if __name__ == '__main__':

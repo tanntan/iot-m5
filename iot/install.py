@@ -58,7 +58,7 @@ def deletWorkingSpace( srcPath ):
                 os.remove(os.path.join(path, name))
                 time.sleep(0.05)
         printProgressBar(i + 1, l, prefix = 'Progress:', suffix = os.path.join(proDir, srcPath), length = 50)
-        
+
 def createHeader(val):
     val = val.split("\n")
     stringVal = '#define VERSION        "'+val[0]+'"'
@@ -79,7 +79,6 @@ def main():
 
     elif sys.argv[1] == "init":
         command = "pip3 install platformio -t "+str(DIR)    +"/.platformio/"
-        os.system("pip3 install pyelftools -t "+str(DIR))
         os.system(command)
     else:
         if sys.argv[1] == "build":

@@ -6,6 +6,7 @@ import glob
 import time
 
 Import("env")
+
 def txtFilter(txt):
     newVal = txt[0].split("\n")
     return newVal[0]
