@@ -79,7 +79,7 @@ def main():
 
     elif sys.argv[1] == "init":
         command = "pip3 install platformio -t "+str(DIR)    +"/.platformio/"
-        os.system("pip3 install pyelftools")
+        os.system("pip3 install pyelftools -t "+str(DIR))
         os.system(command)
     else:
         if sys.argv[1] == "build":
